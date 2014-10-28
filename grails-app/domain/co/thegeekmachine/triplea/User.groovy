@@ -1,6 +1,6 @@
 package co.thegeekmachine.triplea
 
-class SecUser {
+class User {
 
 	transient springSecurityService
 
@@ -23,7 +23,7 @@ class SecUser {
 	}
 
 	Set<RoleGroup> getAuthorities() {
-		SecUserRoleGroup.findAllBySecUser(this).collect { it.roleGroup }
+		UserRoleGroup.findAllByUser(this).collect { it.roleGroup }
 	}
 
 	def beforeInsert() {

@@ -8,8 +8,8 @@ class RoleGroup {
 		cache true
 	}
 
-	Set<SecRole> getAuthorities() {
-		RoleGroupSecRole.findAllByRoleGroup(this).collect { it.secRole }
+	Set<Role> getAuthorities() {
+		RoleGroupRole.findAllByRoleGroup(this).collect { it.role }
 	}
 
 	static constraints = {

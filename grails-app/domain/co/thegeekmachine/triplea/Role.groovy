@@ -1,6 +1,6 @@
 package co.thegeekmachine.triplea
 
-class SecRole {
+class Role {
 
 	String authority
 

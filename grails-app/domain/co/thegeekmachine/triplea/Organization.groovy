@@ -12,9 +12,20 @@ class Organization {
 		departments: Organization,
 		employees: Person,
 		founders: Person,
-		memberOf: Organization
+		memberOf: Organization,
+		events: Event
 	]
-	static hasOne = [address: PostalAddress]
+	
+	static mappedBy = [
+		address: "none",
+		brands: "none",
+		departments: "none",
+		founders: "none",
+		memberOf: "none",
+		events: "none"
+	]
+	
+	PostalAddress address
 	Date dissolutionDate
 	String duns
 	String email

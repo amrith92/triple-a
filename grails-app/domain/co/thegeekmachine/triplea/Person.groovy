@@ -5,7 +5,19 @@ class Person {
     static constraints = {
     }
 	
-	static hasOne = [user: User, address: PostalAddress, spouse: Person]
+	static mappedBy = [
+		address: "none",
+		spouse: "none",
+		affiliation: "none",
+		children: "none",
+		follows: "none",
+		knows: "none",
+		parent: "none",
+		relatedTo: "none"
+	]
+	
+	static belongsTo = Organization
+	
 	static hasMany = [
 		affiliation: Organization,
 		alumniOf: EducationalOrganization,
@@ -20,6 +32,10 @@ class Person {
 		siblings: Person,
 		worksFor: Organization
 	]
+	
+	User user
+	Person spouse
+	PostalAddress address
 	String additionalName
 	Date birthDate
 	Date deathDate

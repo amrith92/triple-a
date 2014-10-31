@@ -1,5 +1,8 @@
 package co.thegeekmachine.triplea
 
+import grails.rest.*
+
+@Resource(uri='/postal-address')
 class PostalAddress {
 
     static constraints = {

@@ -1,5 +1,5 @@
 dataSource {
-    pooled = true
+    pooled = false
     jmxExport = true
     driverClassName = "org.h2.Driver"
     username = "sa"
@@ -18,8 +18,9 @@ hibernate {
 environments {
     development {
         dataSource {
+			dialect = "co.thegeekmachine.ImprovedH2Dialect"
             dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
-            url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
+            url = "jdbc:h2:db/devDb"
         }
     }
     test {

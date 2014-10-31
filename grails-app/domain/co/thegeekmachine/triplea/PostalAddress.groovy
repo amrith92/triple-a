@@ -2,7 +2,7 @@ package co.thegeekmachine.triplea
 
 import grails.rest.*
 
-@Resource(uri='/postal-address')
+@Resource(uri='/postal-address', formats=['json', 'xml'])
 class PostalAddress {
 
     static constraints = {

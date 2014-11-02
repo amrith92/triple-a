@@ -34,3 +34,5 @@ db/*
 /target
 
 /target-eclipse
+
+/node_modules/*
